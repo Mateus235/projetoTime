@@ -1,0 +1,223 @@
+/* Estilo geral para o corpo da página */
+body {
+    font-family: sans-serif; /* Define a família de fontes para o corpo da página */
+    background-image: url(../IMG/Background.png); /* Define uma imagem de fundo */
+    background-attachment: fixed; /* Fixa a imagem de fundo enquanto a página é rolada */
+    background-size: cover; /* Faz com que a imagem de fundo cubra todo o elemento */
+    display: flex; /* Usa o modelo de layout flexível */
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Centraliza o conteúdo verticalmente */
+    flex-direction: column; /* Organiza os itens em coluna */
+    height: 100vh; /* Define a altura como 100% da altura da tela visível */
+}
+
+/* Estilo para títulos h1 */
+h1 {
+    font-size: 1.8em; /* Define o tamanho da fonte do título */
+    margin: 20px 0px 0px 0px; /* Define margens do título (topo, direita, baixo, esquerda) */
+}
+
+/* Estilo para links (a) e parágrafos (p) */
+a, p {
+    color: rgb(0, 0, 0); /* Define a cor do texto para links e parágrafos */
+    text-decoration: none; /* Remove a decoração de sublinhado padrão para links */
+    font-weight: bold; /* Define a espessura da fonte como negrito */
+}
+
+/* Estilo para botões */
+button {
+    font-size: 1em; /* Define o tamanho da fonte para botões */
+    width: 100%; /* Define a largura dos botões como 100% do contêiner */
+    cursor: pointer; /* Define o cursor do mouse como ponteiro */
+    border-radius: 20px; /* Adiciona bordas arredondadas aos botões */
+    background-color: black; /* Define a cor de fundo dos botões */
+    color: white; /* Define a cor do texto dos botões */
+    height: 5vh; /* Define a altura dos botões como 5% da altura da tela visível */
+    transition: 0.1s ease-in; /* Adiciona uma transição suave de 0.1 segundo */
+}
+
+/* Estilo para botões ao passar o mouse sobre eles */
+button:hover {
+    background-color: #DD0000; /* Define a cor de fundo ao passar o mouse sobre os botões */
+    transition: 0.1s ease-in; /* Adiciona uma transição suave ao passar o mouse */
+}
+
+/* Estilo para formulários */
+form {
+    display: flex; /* Usa o modelo de layout flexível para o formulário */
+    flex-direction: column; /* Organiza os itens do formulário em coluna */
+    width: 60%; /* Define a largura do formulário como 60% do contêiner */
+    gap: 10px; /* Define o espaçamento entre os elementos do formulário */
+    align-items: center; /* Centraliza os itens horizontalmente no formulário */
+}
+
+/* Estilo para campos de entrada (input) */
+input {
+    border: unset; /* Remove a borda padrão dos campos de entrada */
+    background: #DDDDDD; /* Define a cor de fundo dos campos de entrada */
+    border-radius: 15px; /* Adiciona bordas arredondadas aos campos de entrada */
+    width: 90%; /* Define a largura dos campos de entrada como 90% do contêiner */
+    font-size: 1em; /* Define o tamanho da fonte dos campos de entrada */
+    padding: 10px 20px 10px 20px; /* Adiciona preenchimento interno aos campos de entrada */
+}
+
+/* Estilo para a div com a classe 'estrutura' */
+.estrutura {
+    background-color: white; /* Define a cor de fundo da div com a classe 'estrutura' */
+    border-radius: 20px; /* Adiciona bordas arredondadas à div com a classe 'estrutura' */
+    width: 30vw; /* Define a largura da div como 30% da largura da tela */
+    height: 100%; /* Define a altura da div como 100% do contêiner pai */
+    display: flex; /* Usa o modelo de layout flexível para a div */
+    flex-direction: column; /* Organiza os itens da div em coluna */
+    align-items: center; /* Centraliza os itens horizontalmente na div */
+}
+
+/* Estilo para o cabeçalho da página */
+.cabecalho {
+    margin-top: 10px; /* Define a margem superior do cabeçalho */
+    display: flex; /* Usa o modelo de layout flexível para o cabeçalho */
+    justify-content: center; /* Centraliza os itens horizontalmente no cabeçalho */
+    align-items: center; /* Centraliza os itens verticalmente no cabeçalho */
+    position: relative; /* Define a posição do cabeçalho como relativa */
+}
+
+/* Estilo para o escudo do time */
+#escudo {
+    top: -17px; /* Define a posição superior do escudo do time */
+    width: 13vh; /* Define a largura do escudo do time */
+    z-index: 1; /* Define a ordem de empilhamento do escudo do time */
+}
+
+/* Estilo para as cores do time */
+.cores {
+    width: 30vw; /* Define a largura das cores do time como 30% da largura da tela */
+    position: absolute; /* Define a posição das cores do time como absoluta */
+    z-index: 0; /* Define a ordem de empilhamento das cores do time */
+}
+
+/* Estilo para a div com a classe 'ancoras' */
+.ancoras {
+    text-align: center; /* Centraliza o texto dentro da div com a classe 'ancoras' */
+}
+
+/* Estilo para links com a classe 'ancora' */
+.ancora {
+    color: #DD0000; /* Define a cor do texto para links com a classe 'ancora' */
+}
+
+/* Estilo para links com a classe 'ancora' ao passar o mouse sobre eles */
+.ancora:hover {
+    color: black; /* Define a cor do texto ao passar o mouse sobre links com a classe 'ancora' */
+}
+
+/* Estilo para a linha preta */
+#preto {
+    height: 3vh; /* Define a altura da linha preta */
+    background-color: black; /* Define a cor de fundo da linha preta */
+}
+
+/* Estilo para a linha branca */
+#branco {
+    height: 1vh; /* Define a altura da linha branca */
+    background-color: white; /* Define a cor de fundo da linha branca */
+}
+
+/* Estilo para a linha vermelha */
+#vermelho {
+    height: 3vh; /* Define a altura da linha vermelha */
+    background-color: #DD0000; /* Define a cor de fundo da linha vermelha */
+}
+
+/* Estilo para o rodapé da página */
+.footer {
+    width: 25vw; /* Define a largura do rodapé como 25% da largura da tela */
+    background-color: rgba(255, 255, 255, 0.479); /* Define a cor de fundo do rodapé com opacidade */
+    border-radius: 5px; /* Adiciona bordas arredondadas ao rodapé */
+    text-align: center; /* Centraliza o texto dentro do rodapé */
+    margin-top: 50px; /* Define a margem superior do rodapé */
+}
+
+/* Media Query para telas com largura máxima de 1024 pixels */
+@media screen and (max-width: 1024px){
+
+    /* Estilo para o div com a classe 'estrutura' dentro da media query */
+    body{
+        background-image: url(../IMG/Background-1024.jpg); /* muda a resolução da imagem para se adaptar a nova largura de 1024px*/
+    }
+    .estrutura{
+        width: 45vw;/* Define a largura da div */
+    }
+
+    /* Estilo para o div com a classe 'cores' dentro da media query */
+    .cores{
+        width: 45vw;/* Define a largura da div */
+    }
+
+    /* Estilo para o div com a classe 'footer' dentro da media query */
+    .footer{
+        width: 40vw;/* Define a largura da div */
+    }
+}
+
+@media screen and (max-width: 768px){
+    body{
+        background-image: url(../IMG/Background-phone.jpg); /* Define um novo background para a largura de 768px*/
+        background-position: center; /* centraliza o novo background*/
+    }
+    /* Estilo para o div com a classe 'estrutura' dentro da media query */
+    .estrutura{
+        width: 50vw; /* Define a largura da div */
+    }
+
+    /* Estilo para o div com a classe 'cores' dentro da media query */
+    .cores{
+        width: 50vw; /* Define a largura da div */
+    }
+
+    /* Estilo para o div com a classe 'footer' dentro da media query */
+    .footer{
+        width: 45vw;/* Define a largura da div */
+        font-size: 0.9em;/* Define o tamanho da fonte do footer*/
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    /* Estilo para o div com a classe 'estrutura' dentro da media query */
+    .estrutura{
+        width: 65vw;/* Define a largura da div */
+    }
+
+    /* Estilo para o div com a classe 'cores' dentro da media query */
+    .cores{
+        width: 65vw;/* Define a largura da div */
+    }
+
+    /* Estilo para o div com a classe 'footer' dentro da media query */
+    .footer{
+        width: 55vw;/* Define a largura da div */
+    }
+}
+
+@media screen and (max-width: 400px){
+
+    /* Estilo para o botão dentro da media query */
+    button{
+        width: 70%;/* Define a largura da div */
+    }
+
+    /* Estilo para o div com a classe 'estrutura' dentro da media query */
+    .estrutura{
+        width: 75vw;/* Define a largura da div */
+    }
+
+    /* Estilo para o div com a classe 'cores' dentro da media query */
+    .cores{
+        width: 75vw;/* Define a largura da div */
+    }
+
+    /* Estilo para o div com a classe 'footer' dentro da media query */
+    .footer{
+        width: 65vw;/* Define a largura da div */
+    }
+}

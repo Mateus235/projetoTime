@@ -1,0 +1,63 @@
+/* Estilo para o formulário com margens */
+form {
+    margin: 10px 0px 35px 0px; /* Adiciona margens superior, direita, inferior e esquerda ao formulário */
+}
+
+/* Estilo para o parágrafo com a classe 'paragrafo' */
+.paragrafo {
+    font-size: 1em; /* Define o tamanho da fonte do parágrafo */
+    text-align: center; /* Centraliza o texto do parágrafo */
+    width: 60%; /* Define a largura do parágrafo como 60% do contêiner*/
+}
+
+/* Estilo para a div com a classe 'estrutura' com altura de 105% */
+.estrutura {
+    height: 105%; /* Define a altura da div com a classe 'estrutura' como 105% do contêiner */
+}
+
+/* Estilo para o botão de voltar com largura de 10% da largura da tela visível */
+.btn-voltar {
+    width: 10vw; /* Define a largura do botão de voltar como 10% da largura da tela visível */
+}
+
+/* Estilo para a div com a classe 'senha-footer' */
+.senha-footer {
+    width: 25vw; /* Define a largura da div com a classe 'senha-footer' como 25% da largura da tela visível */
+    background-color: rgba(255, 255, 255, 0.479); /* Define a cor de fundo da div com opacidade */
+    border-radius: 5px; /* Adiciona bordas arredondadas à div 'senha-footer' */
+    margin-top: 50px; /* Adiciona uma margem superior de 50 pixels à div 'senha-footer' */
+    align-items: center; /* Centraliza os itens horizontalmente na div 'senha-footer' */
+}
+
+/* Estilo para o parágrafo dentro da div 'senha-footer' */
+.p-footer {
+    width: 100%; /* Define a largura do parágrafo como 100% da largura da div 'senha-footer' */
+}
+
+/* Media Query para telas com largura máxima de 750 pixels */
+@media screen and (max-width: 768px) {
+    /* Estilo para o botão de voltar dentro da media query */
+    .btn-voltar {
+        width: 12vw; /* Redefine a largura do botão de voltar como 12% da largura da tela visível */
+    }
+
+    /* Estilo para o parágrafo com a classe 'paragrafo' dentro da media query */
+    .paragrafo {
+        width: 50vw;
+        font-size: 0.9em; /* Define o tamanho da fonte do parágrafo */
+    }
+}
+
+/* Media Query para telas com largura máxima de 550 pixels */
+@media screen and (max-width: 550px) {
+    /* Estilo para o botão de voltar dentro da media query */
+    .btn-voltar {
+        width: 16vw; /* Redefine a largura do botão de voltar como 16% da largura da tela visível */
+    }
+
+    /* Estilo para o parágrafo com a classe 'paragrafo' dentro da media query */
+    .paragrafo {
+        width: 40vw; /* Redefine a largura do botão de voltar como 40% da largura da tela visível */
+        font-size: 0.8em; /* Define o tamanho da fonte do parágrafo */
+    }
+}

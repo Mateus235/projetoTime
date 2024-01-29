@@ -1,0 +1,24 @@
+/* Estilo para o formulário */
+form {
+    margin-top: 10px; /* Adiciona uma margem superior de 10 pixels ao formulário */
+}
+
+/* Estilo para a div com a classe 'estrutura' */
+.estrutura {
+    height: 60vh; /* Define a altura da div com a classe 'estrutura' como 60% da altura da tela visível */
+}
+
+/* Estilo para o botão de cadastro */
+.btn-cadastro {
+    margin: 20px; /* Adiciona margem ao botão de cadastro */
+}
+
+/* Estilo para o subtítulo */
+.sub-title {
+    margin: 20px; /* Adiciona margem ao subtítulo */
+}
+
+/* Estilo para o parágrafo com a classe 'cc' */
+.cc {
+    margin: auto; /* Centraliza o parágrafo horizontalmente */
+}

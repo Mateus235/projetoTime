@@ -1,0 +1,27 @@
+/* Estilo para o formulário com margem superior */
+form {
+    margin-top: 1vh; /* Adiciona uma margem superior de 5% da altura da tela visível */
+}
+/* Folha da estilo para mascote do clube na pagina de login */
+.mascote{
+    height: 100px; /* Define uma altura de 100px para a imagem do mascote*/
+}
+/* Estilo para o botão de login com margem superior */
+.login-button {
+    margin-top: 20px; /* Adiciona uma margem superior de 20 pixels ao botão de login */
+}
+
+/* Estilo para a div com a classe 'ancoras' com margem superior */
+.ancoras {
+    margin-top: 40px; /* Adiciona uma margem superior de 40 pixels à div com a classe 'ancoras' */
+}
+
+/* Estilo para o link com a classe 'senha' ao passar o mouse sobre ele */
+.senha:hover {
+    color: #DD0000; /* Define a cor do texto ao passar o mouse sobre o link com a classe 'senha' */
+}
+
+/* Estilo para a div com a classe 'estrutura' com altura de 50% da tela visível */
+.estrutura {
+    height: 50vh; /* Define a altura da div com a classe 'estrutura' como 50% da altura da tela visível */
+}
