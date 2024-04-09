@@ -1,0 +1,10 @@
+nav{
+    background-color: red;
+}
+
+body{
+    background:linear-gradient(rgba(248, 246, 246, 0.801), rgba(248, 248, 248, 0.568)), url(../IMG/torcida.png);
+   background-size: cover;
+   
+    background-repeat: no-repeat;
+}

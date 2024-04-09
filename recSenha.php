@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <title>Recuperar Senha</title>
     <link rel="stylesheet" href="./CSS/cadastro.css" class="rel"> <!-- Link da folha de estilos da página de cadastro -->
     <link rel="stylesheet" href="./CSS/estrutura.css" class="rel"> <!-- Link da folha de estilos da estrutura geral das páginas web -->
 </head>
@@ -20,22 +20,34 @@
                     <div id="vermelho"></div> <!-- Div feita para criar uma linha de cor vermelha -->
                 </div>
             </div>
-            <h1 class="sub-title">Cadastre-se</h1> <!-- Título da página -->
-            <p class="cc">Já possui uma conta? <a class="ancora" href="./login.html">Entrar</a></p> <!-- Parágrafo utilizado para guiar o usuário caso ele já possua uma conta -->
-            <form> <!-- Tag utilizada para dar início ao formulário de cadastro -->
-                <input class="a" type="text" placeholder="Nome"> <!-- Input utilizado no formulário para solicitar ao usuário que preencha com seu nome -->
-                <input class="b" type="email" placeholder="E-mail"> <!-- Input utilizado no formulário para solicitar ao usuário que preencha com seu e-mail -->
-                <input class="c" type="password" placeholder="Senha"> <!-- Input utilizado no formulário para solicitar ao usuário que preencha com sua senha -->
-                <input class="d" type="password" placeholder="Confirme sua senha"> <!-- Input utilizado no formulário para solicitar ao usuário que confirme a senha que ele preencheu anteriormente -->
-                <button class="btn-cadastro">Cadastrar</button> <!-- Botão criado para que o usuário confirme seu cadastro -->
+            <h1 class="sub-title">Recuperar Senha</h1> <!-- Título da página -->
+            <?php include_once('./controllers/alterar.php');?>
+            <form method="POST"> <!-- Tag utilizada para dar início ao formulário de cadastro -->
+                <input class="c" id="senha" type="password" placeholder="Nova Senha" name="senha" required> <!-- Input utilizado no formulário para solicitar ao usuário que preencha com sua senha -->
+                <input class="d" id="senha2" type="password" placeholder="Confirme sua senha" name="senha2" required> <!-- Input utilizado no formulário para solicitar ao usuário que confirme a senha que ele preencheu anteriormente -->
+                <button class="btn-cadastro"id="btn" type="submit" name="submit">Confirmar</button> <!-- Botão criado para que o usuário confirme seu cadastro -->
             </form>
         </div>
     </main>
     <footer>
+        <?php 
+        if (isset($_SESSION['erro-alterar-senha'])) 
+            {
+                echo '<input type="hidden" id="erro-alterar-senha" value="' . $_SESSION['erro-alterar-senha'] . '">';
+                unset($_SESSION['erro-alterar-senha']); 
+            }
+            ?>
         <div class="footer">
             <p class="p-footer">Design by Jefferson, Mateus e Rodrigo - 2024 &copy;</p> <!-- Footer com as informações de quem desenvolveu o site -->
         </div>
-    </footer>
-</body>
 
+
+        
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
 </html>
+
+<!-- By Allan -->

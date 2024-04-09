@@ -1,4 +1,10 @@
 /* Estilo geral para o corpo da página */
+:root{
+    --red: #DD0000;
+    --black: #000000;
+    --white: #ffffff;
+}
+
 body {
     font-family: sans-serif; /* Define a família de fontes para o corpo da página */
     background-image: url(../IMG/Background.png); /* Define uma imagem de fundo */
@@ -19,7 +25,7 @@ h1 {
 
 /* Estilo para links (a) e parágrafos (p) */
 a, p {
-    color: rgb(0, 0, 0); /* Define a cor do texto para links e parágrafos */
+    color: var(--black); /* Define a cor do texto para links e parágrafos */
     text-decoration: none; /* Remove a decoração de sublinhado padrão para links */
     font-weight: bold; /* Define a espessura da fonte como negrito */
 }
@@ -30,15 +36,15 @@ button {
     width: 100%; /* Define a largura dos botões como 100% do contêiner */
     cursor: pointer; /* Define o cursor do mouse como ponteiro */
     border-radius: 20px; /* Adiciona bordas arredondadas aos botões */
-    background-color: black; /* Define a cor de fundo dos botões */
-    color: white; /* Define a cor do texto dos botões */
+    background-color: var(--black); /* Define a cor de fundo dos botões */
+    color: var(--white); /* Define a cor do texto dos botões */
     height: 5vh; /* Define a altura dos botões como 5% da altura da tela visível */
     transition: 0.1s ease-in; /* Adiciona uma transição suave de 0.1 segundo */
 }
 
 /* Estilo para botões ao passar o mouse sobre eles */
 button:hover {
-    background-color: #DD0000; /* Define a cor de fundo ao passar o mouse sobre os botões */
+    background-color: var(--red); /* Define a cor de fundo ao passar o mouse sobre os botões */
     transition: 0.1s ease-in; /* Adiciona uma transição suave ao passar o mouse */
 }
 
@@ -63,9 +69,9 @@ input {
 
 /* Estilo para a div com a classe 'estrutura' */
 .estrutura {
-    background-color: white; /* Define a cor de fundo da div com a classe 'estrutura' */
+    background-color: var(--white); /* Define a cor de fundo da div com a classe 'estrutura' */
     border-radius: 20px; /* Adiciona bordas arredondadas à div com a classe 'estrutura' */
-    width: 30vw; /* Define a largura da div como 30% da largura da tela */
+    width: 25vw; /* Define a largura da div como 30% da largura da tela */
     height: 100%; /* Define a altura da div como 100% do contêiner pai */
     display: flex; /* Usa o modelo de layout flexível para a div */
     flex-direction: column; /* Organiza os itens da div em coluna */
@@ -90,7 +96,7 @@ input {
 
 /* Estilo para as cores do time */
 .cores {
-    width: 30vw; /* Define a largura das cores do time como 30% da largura da tela */
+    width: 25vw; /* Define a largura das cores do time como 30% da largura da tela */
     position: absolute; /* Define a posição das cores do time como absoluta */
     z-index: 0; /* Define a ordem de empilhamento das cores do time */
 }
@@ -102,30 +108,30 @@ input {
 
 /* Estilo para links com a classe 'ancora' */
 .ancora {
-    color: #DD0000; /* Define a cor do texto para links com a classe 'ancora' */
+    color: var(--red); /* Define a cor do texto para links com a classe 'ancora' */
 }
 
 /* Estilo para links com a classe 'ancora' ao passar o mouse sobre eles */
 .ancora:hover {
-    color: black; /* Define a cor do texto ao passar o mouse sobre links com a classe 'ancora' */
+    color: var(--black); /* Define a cor do texto ao passar o mouse sobre links com a classe 'ancora' */
 }
 
 /* Estilo para a linha preta */
 #preto {
     height: 3vh; /* Define a altura da linha preta */
-    background-color: black; /* Define a cor de fundo da linha preta */
+    background-color: var(--black); /* Define a cor de fundo da linha preta */
 }
 
 /* Estilo para a linha branca */
 #branco {
     height: 1vh; /* Define a altura da linha branca */
-    background-color: white; /* Define a cor de fundo da linha branca */
+    background-color: var(--white); /* Define a cor de fundo da linha branca */
 }
 
 /* Estilo para a linha vermelha */
 #vermelho {
     height: 3vh; /* Define a altura da linha vermelha */
-    background-color: #DD0000; /* Define a cor de fundo da linha vermelha */
+    background-color: var(--red); /* Define a cor de fundo da linha vermelha */
 }
 
 /* Estilo para o rodapé da página */

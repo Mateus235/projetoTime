@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include_once('models/conexao.php');
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -19,11 +24,11 @@
                 </div>
             </div>
             <p class="paragrafo">Insira abaixo o e-mail da conta para envio de confirmação de redefinição de senha.</p> <!-- Parágrafo informativo sobre o objetivo da página -->
-            <form> <!-- Tag utilizada para dar início ao formulário de recuperação de senha -->
-                <input type="email" placeholder="E-mail"> <!-- Input utilizado no formulário para solicitar ao usuário que insira o e-mail da conta -->
-                <button class="login-button">Enviar</button> <!-- Botão criado para que o usuário envie a solicitação de recuperação de senha -->
+            <form action="./controllers/recuperarSenha.php" method="post"> <!-- Tag utilizada para dar início ao formulário de recuperação de senha -->
+                <input type="email" placeholder="E-mail" name="email"> <!-- Input utilizado no formulário para solicitar ao usuário que insira o e-mail da conta -->
+                <button class="login-button" type="submit" name="submit">Enviar</button> <!-- Botão criado para que o usuário envie a solicitação de recuperação de senha -->
             </form>
-            <a href="./login.html"><button class="btn-voltar">Voltar</button></a> <!-- Link e botão criados para permitir que o usuário retorne à página de login -->
+            <a href="./login.php"><button class="btn-voltar">Voltar</button></a> <!-- Link e botão criados para permitir que o usuário retorne à página de login -->
         </div>
     </main>
     <footer>
@@ -31,5 +36,21 @@
             <p class="p-footer">Design by Jefferson, Mateus e Rodrigo - 2024 &copy;</p> <!-- Footer com as informações de quem desenvolveu o site -->
         </div>
     </footer>
+    <?php
+        if (isset($_SESSION['sucesso-email-senha'])) 
+            {
+                echo '<input type="hidden" id="sucesso-email-senha" value="' . $_SESSION['sucesso-email-senha'] . '">';
+                unset($_SESSION['sucesso-email-senha']); 
+            }
+
+            if (isset($_SESSION['erro-email-senha'])) 
+            {
+                echo '<input type="hidden" id="erro-email-senha" value="' . $_SESSION['erro-email-senha'] . '">';
+                unset($_SESSION['erro-email-senha']); 
+            }
+        ?>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

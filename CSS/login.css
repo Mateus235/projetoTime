@@ -18,7 +18,7 @@ form {
 
 /* Estilo para o link com a classe 'senha' ao passar o mouse sobre ele */
 .senha:hover {
-    color: #DD0000; /* Define a cor do texto ao passar o mouse sobre o link com a classe 'senha' */
+    color: var(--red); /* Define a cor do texto ao passar o mouse sobre o link com a classe 'senha' */
 }
 
 /* Estilo para a div com a classe 'estrutura' com altura de 50% da tela visível */

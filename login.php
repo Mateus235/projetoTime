@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    include_once('models/conexao.php'); 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,14 +26,14 @@
                 </div>
             </div>
             <img src="./IMG/mascote.png" alt="mascote do clube" class="mascote">
-            <form> <!-- Tag utilizada para dar início ao formulário de login -->
-                <input type="email" placeholder="E-mail"> <!-- Input utilizado no formulário para solicitar ao usuário que preencha com seu e-mail -->
-                <input type="password" placeholder="Senha"> <!-- Input utilizado no formulário para solicitar ao usuário que preencha com sua senha -->
-                <button class="login-button">Login</button> <!-- Botão criado para que o usuário confirme o login -->
+            <form action="./controllers/logar.php" method="post"> <!-- Tag utilizada para dar início ao formulário de login -->
+                <input type="email" placeholder="E-mail" name="email"> <!-- Input utilizado no formulário para solicitar ao usuário que preencha com seu e-mail -->
+                <input type="password" placeholder="Senha" name="senha"> <!-- Input utilizado no formulário para solicitar ao usuário que preencha com sua senha -->
+                <button class="login-button" name="submit" type="submit">Login</button> <!-- Botão criado para que o usuário confirme o login -->
             </form>
             <div class="ancoras"> <!-- Div criada para organizar links e informações adicionais -->
-                <a class="senha" href="./senha.html"> Esqueci minha senha</a> <!-- Link para a página de recuperação de senha -->
-                <p>Não possui conta? <a class="ancora" href="./cadastro.html">Cadastre-se</a></p> <!-- Parágrafo utilizado para guiar o usuário caso ele não tenha uma conta -->
+                <a class="senha" href="./senha.php"> Esqueci minha senha</a> <!-- Link para a página de recuperação de senha -->
+                <p>Não possui conta? <a class="ancora" href="./index.php">Cadastre-se</a></p> <!-- Parágrafo utilizado para guiar o usuário caso ele não tenha uma conta -->
             </div>
         </div>
     </main>
@@ -37,6 +42,24 @@
             <p class="p-footer">Design by Jefferson, Mateus e Rodrigo - 2024 &copy;</p> <!-- Footer com as informações de quem desenvolveu o site -->
         </div>
     </footer>
+
+    <?php
+        if (isset($_SESSION['erro-login'])) 
+        {
+            echo '<input type="hidden" id="erro_login" value="' . $_SESSION['erro-login'] . '">';
+            unset($_SESSION['erro-login']); 
+        }
+        if (isset($_SESSION['sucesso-alterar-senha'])) 
+            {
+                echo '<input type="hidden" id="sucesso-alterar-senha" value="' . $_SESSION['sucesso-alterar-senha'] . '">';
+                unset($_SESSION['sucesso-alterar-senha']); 
+            }
+
+            
+    ?>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>
